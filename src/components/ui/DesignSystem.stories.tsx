@@ -2,57 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Badge } from './Badge';
 import { Button } from './Button';
 import { Card } from './Card';
-
-function DesignSystemShowcase() {
-  return (
-    <div className="max-w-4xl space-y-8 p-6">
-      <section className="space-y-3">
-        <h1 className="text-2xl font-black text-slate-950 dark:text-white">CompanyScope primitives</h1>
-        <div className="flex flex-wrap gap-2">
-          <Button>Primary action</Button>
-          <Button variant="secondary">Secondary</Button>
-          <Button variant="ghost">Ghost</Button>
-          <Button variant="danger">Destructive</Button>
-          <Button disabled>Disabled</Button>
-        </div>
-      </section>
-
-      <section className="space-y-3">
-        <h2 className="text-lg font-bold text-slate-950 dark:text-white">Status semantics</h2>
-        <div className="flex flex-wrap gap-2">
-          <Badge>Neutral</Badge>
-          <Badge tone="accent">Accent</Badge>
-          <Badge tone="positive">Positive</Badge>
-          <Badge tone="warning">Warning</Badge>
-          <Badge tone="danger">Danger</Badge>
-        </div>
-      </section>
-
-      <section className="grid gap-3 md:grid-cols-2">
-        <Card>
-          <h2 className="font-bold text-slate-950 dark:text-white">Card surface</h2>
-          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-            Shared surface treatment keeps data-heavy layouts visually consistent.
-          </p>
-        </Card>
-        <Card className="border-blue-200 bg-blue-50/60 dark:border-blue-900 dark:bg-blue-950/30">
-          <h2 className="font-bold text-slate-950 dark:text-white">Context surface</h2>
-          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-            The same primitive supports contextual emphasis without adding another component abstraction.
-          </p>
-        </Card>
-      </section>
-    </div>
-  );
-}
-
-const meta = {
-  title: 'Design System/Primitives',
-  component: DesignSystemShowcase,
-  parameters: { layout: 'fullscreen' },
-} satisfies Meta<typeof DesignSystemShowcase>;
-
+function DesignSystemShowcase() { return <div className="min-h-screen bg-[#fffaf2] p-8 dark:bg-[#120d13]"><div className="mx-auto max-w-5xl space-y-8"><header className="rounded-[2rem] bg-[#5f2548] p-8 text-white"><p className="text-xs font-black uppercase tracking-[.2em] text-[#f2cadd]">CompanyScope Product</p><h1 className="mt-2 text-3xl font-black">Decision-system foundations</h1><p className="mt-2 max-w-2xl text-sm text-white/80">Editorial surfaces distinguish evidence, decisions and learning loops without turning every metric into a dashboard tile.</p></header><section className="space-y-3"><h2 className="text-lg font-black text-[#28171f] dark:text-white">Actions</h2><div className="flex flex-wrap gap-2"><Button>Commit decision</Button><Button variant="secondary">Review</Button><Button variant="ghost">Defer</Button><Button variant="danger">Remove</Button></div></section><section className="space-y-3"><h2 className="text-lg font-black text-[#28171f] dark:text-white">Signals</h2><div className="flex flex-wrap gap-2"><Badge>Context</Badge><Badge tone="accent">Decision</Badge><Badge tone="positive">Validated</Badge><Badge tone="warning">Watch</Badge><Badge tone="danger">Risk</Badge></div></section><Card><h2 className="font-black text-[#28171f] dark:text-white">Evidence surface</h2><p className="mt-2 text-sm text-[#725c64] dark:text-[#c7b2bc]">Warm neutral surfaces keep dense evidence readable while plum/orange accents are reserved for decisions and learning loops.</p></Card></div></div>; }
+const meta = { title: 'Design System/Product Foundations', component: DesignSystemShowcase, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof DesignSystemShowcase>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
 export const Overview: Story = {};
