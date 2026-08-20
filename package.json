@@ -69,8 +69,9 @@
     "vite": "^8.2.0",
     "vitest": "4.1.10"
   },
-  "name": "companyscope-product",
+  "name": "companyscope-product-engineering",
   "engines": {
     "node": ">=24.15.0 <25"
-  }
+  },
+  "description": "Senior product engineering portfolio: company intelligence SaaS with decision lenses, segmentation, experiments, analytics and production-grade delivery."
 }
