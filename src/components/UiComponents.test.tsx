@@ -31,7 +31,7 @@ describe('design-system and shell components', () => {
   it('renders security controls and header navigation states', () => {
     render(<ThemeProvider><MemoryRouter initialEntries={['/dashboard']}><AppHeader /><SecurityPanel /></MemoryRouter></ThemeProvider>);
     expect(screen.getByRole('navigation', { name: 'Primary' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Explorer' })).toHaveAttribute('aria-current', 'page');
+    expect(screen.getByRole('link', { name: 'Decisions' })).toHaveAttribute('aria-current', 'page');
     expect(screen.getByRole('heading', { name: 'Security posture' })).toBeInTheDocument();
     expect(screen.getByText('CSRF + Origin')).toBeInTheDocument();
   });
